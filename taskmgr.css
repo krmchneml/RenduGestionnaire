@@ -1,0 +1,250 @@
+.headr {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#btnsubmit {
+    background-color: burlywood;
+    color: rgb(12, 6, 6);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 2s, transform 0.3s; /* Transition pour le changement de fond et l'effet de transformation */
+    margin-inline-start: 7px;
+    height: 5.3vh;
+    animation: buttonAnimation 4s infinite alternate; /* L'animation se lance avec une durée de 4 secondes */
+}
+
+button:hover {
+    color: rgb(18, 56, 170);
+}
+
+/* Animation du bouton */
+@keyframes buttonAnimation {
+    0% {
+        background-color: burlywood;
+        transform: scale(1); /* Taille normale */
+    }
+    25% {
+        background-color: bisque;
+        transform: scale(1.1); /* Augmente légèrement la taille */
+    }
+    50% {
+        background-color: #f4a300; /* Changement de couleur (beige doré) */
+        transform: scale(1); /* Retour à la taille normale */
+    }
+    75% {
+        background-color: #d2b48c; /* Couleur beige brune */
+        transform: scale(1.1); /* Agrandissement du bouton */
+    }
+    100% {
+        background-color: burlywood; /* Retour à la couleur initiale */
+        transform: scale(1); /* Taille normale */
+    }
+}
+
+button:hover {
+    background-color: bisque;
+    box-shadow: 2px 1px 2px rgb(46, 46, 46);
+}
+
+
+.taskinput {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 3px solid burlywood; /* Bordure initiale */
+    border-radius: 8px;
+    box-sizing: border-box;
+    animation: borderAnimation 4s infinite alternate; /* L'animation dure 6 secondes pour ralentir */
+}
+
+/* Définition de l'animation */
+@keyframes borderAnimation {
+    0% {
+        border-color: #f5deb3; /* Beige clair (blé) */
+    }
+    25% {
+        border-color: #d2b48c; /* Couleur beige + brune (tan) */
+    }
+    50% {
+        border-color: #f4a300; /* Beige doré */
+    }
+    75% {
+        border-color: #c2b280; /* Beige olive */
+    }
+    100% {
+        border-color: #d9d0c7; /* Beige clair, presque gris */
+    }
+}
+
+
+
+
+
+#champtexte {
+    display: flex;
+    align-items: end;
+    margin-top: 20px;
+}
+
+
+@keyframes changementDeCouleur {
+    0% {
+      color: #f5deb3; /* Début de l'animation (rouge) */
+    }
+    25% {
+      color: #d2b48c; /* 25% du temps (bleu) */
+    }
+    50% {
+      color: #f4a300; /* 50% du temps (vert) */
+    }
+    75% {
+      color: #c2b280; /* 75% du temps (orange) */
+    }
+    100% {
+      color: #d9d0c7; /* Fin de l'animation (violet) */
+    }
+  }
+  
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    animation: changementDeCouleur 4s infinite; /* Applique l'animation de couleur */
+  }
+
+
+/* Style de base pour la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #ff7e5f, #4e0760, #ca3363, #2575fc);
+    background-size: 1000% 1000%; /* Permet au dégradé de couvrir toute la page */
+    animation: gradientAnimation 7.3s ease infinite; /* Animation du dégradé */
+    transition: background-color 0.3s ease;
+}
+
+/* Dégradé animé de fond */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Style de base pour les éléments de la liste */
+ul#list-task {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+li {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #000000;
+    position: relative;
+    transition: transform 0.3s ease;
+    width: 85vw;
+    height: 5vh;
+    margin-left: 5.5%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Effet de survol des éléments de la liste */
+li:hover {
+    color: white; /* Change la couleur du texte */
+    background-color: #ff7e5f; /* Change la couleur de fond */
+    animation: gradientAnimation3 4s ease infinite;
+}
+
+@keyframes gradientAnimation3 {
+    0% {
+      color: #1138ae; /* Début de l'animation (rouge) */
+    }
+    25% {
+      color: #a40bdc; /* 25% du temps (bleu) */
+    }
+    50% {
+      color: #34bbf9; /* 50% du temps (vert) */
+    }
+    75% {
+      color: #1fe2d8; /* 75% du temps (orange) */
+    }
+    100% {
+      color: #6308d1; /* Fin de l'animation (violet) */
+    }
+  }
+
+
+/* Dégradé animé au survol des éléments de la liste */
+li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    z-index: -1; /* Place le dégradé derrière le texte */
+    animation: gradientAnimation 4s ease infinite;
+}
+
+/* Animation du dégradé au survol */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+#buttonsupp {
+    border-radius: 9px;
+}
+
+#buttonsupp:hover {
+    color: rgb(0, 0, 0); 
+    background: linear-gradient(45deg, #880808, #FF3131, #C41E3A, #811331);
+    background-size: 1000% 1000%; /* Permet au dégradé de couvrir toute la page */
+    animation: gradientAnimation 4.3s ease infinite; /* Animation du dégradé */
+    transition-delay: 100s;
+}
+
+
